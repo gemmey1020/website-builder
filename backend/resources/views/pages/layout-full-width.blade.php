@@ -1,0 +1,44 @@
+@extends('layout.default', [
+	'appSidebarHide' => true,
+	'appClass' => 'app-content-full-width'
+])
+
+@section('title', 'Full Width')
+
+@push('js')
+	<script src="/assets/plugins/@highlightjs/cdn-assets/highlight.min.js"></script>
+	<script src="/assets/js/demo/highlightjs.demo.js"></script>
+@endpush
+
+@section('content')
+  <ul class="breadcrumb">
+		<li class="breadcrumb-item"><a href="#">LAYOUT</a></li>
+		<li class="breadcrumb-item active">FULL WIDTH</li>
+	</ul>
+
+	<h1 class="page-header">
+		Full Width <small>page header description goes here...</small>
+	</h1>
+
+	<hr class="mb-4">
+
+	<p>
+		Add the <code>.app-content-full-width</code> css class to <code>.app</code> container for full width page setting.
+	</p>
+
+	<div class="card mb-3">
+		<div class="hljs-container border-0">
+			<pre><code data-url="/assets/data/layout-full-width/code-1.json"></code></pre>
+		</div>
+		<div class="card-arrow">
+			<div class="card-arrow-top-left"></div>
+			<div class="card-arrow-top-right"></div>
+			<div class="card-arrow-bottom-left"></div>
+			<div class="card-arrow-bottom-right"></div>
+		</div>
+	</div>
+
+	<p>
+		<a href="javascript:history.back(-1);" class="btn btn-outline-theme"><i class="bi bi-chevron-left fa-fw ms-n1"></i> Back to previous Page</a>
+	</p>
+@endsection

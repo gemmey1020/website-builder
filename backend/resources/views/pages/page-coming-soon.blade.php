@@ -1,0 +1,47 @@
+@extends('layout.default', [
+	'bodyClass' => 'pace-top',
+	'appHeaderHide' => true,
+	'appSidebarHide' => true,
+	'appContentHide' => true,
+	'appClass' => 'app-full-height app-without-header p-0'
+])
+
+@section('title', 'Coming Soon Page')
+
+@push('css')
+  <link href="/assets/plugins/kbw-countdown/dist/css/jquery.countdown.css" rel="stylesheet">
+@endpush
+
+@push('js')
+	<script src="/assets/plugins/kbw-countdown/dist/js/jquery.plugin.js"></script>
+	<script src="/assets/plugins/kbw-countdown/dist/js/jquery.countdown.js"></script>
+	<script src="/assets/js/demo/page-coming-soon.demo.js"></script>
+@endpush
+
+@section('content')
+  <!-- BEGIN coming-soon -->
+	<div class="coming-soon">
+		<div class="flex-1">
+			<div class="coming-soon-timer">
+				<div id="timer"></div>
+			</div>
+			<!-- BEGIN coming-soon-content -->
+			<div class="coming-soon-content d-flex flex-column">
+				<div class="flex-1 mb-3">
+					<h2 class="mb-3">We're coming soon!</h2>
+					<p class="mb-4">We are working very hard on the new version of our site.<br> It will bring a lot of new features. Stay tuned!</p>
+					<div class="input-group mb-2">
+						<input type="text" class="form-control" placeholder="Email Address">
+						<button type="submit" class="btn btn-outline-theme">SUBSCRIBE</button>
+					</div>
+					<div class="mb-1 small text-inverse text-opacity-50">* Subscribe and get notified for latest news</div>
+				</div>
+				<div class="text-center small text-inverse text-opacity-50">
+					&copy; 2023 SeanTheme Right Reserved
+				</div>
+			</div>
+			<!-- END coming-soon-content -->
+		</div>
+	</div>
+	<!-- END coming-soon -->
+@endsection
